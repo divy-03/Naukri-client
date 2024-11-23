@@ -1,0 +1,33 @@
+.navbar {
+  @include flex(row, space-between);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  background-color: goldenrod;
+  padding: 2rem;
+  > div {
+    @include flex();
+
+    > h2 {
+      font-family: "Grotesk";
+      text-transform: uppercase;
+      font-size: 40px;
+      color: rgb(8, 5, 33);
+    }
+    > a {
+        @include flex();
+        color: black;
+      > img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+    > button {
+        @include btn(gold);
+    }
+  }
+}

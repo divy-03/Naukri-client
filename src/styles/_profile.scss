@@ -1,0 +1,159 @@
+.proBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 20px;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  > div {
+    padding: 2rem;
+
+    > button {
+      @include btn(pink);
+      @include flex();
+      font-weight: 900;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+    }
+    > div {
+      @include flex(column);
+
+      > form {
+        @include flex(column);
+
+        > div > img {
+          max-width: 150px;
+          max-height: 200px;
+          border-radius: 1rem;
+        }
+
+        > input, select {
+          padding: 1rem 2rem;
+          width: calc(15rem + 10vw);
+          // text-align: center;
+          @include sansa();
+          font-size: 1.1rem;
+          border: none;
+          background-color: wheat;
+          border-bottom: 2px solid darkblue;
+
+          &:focus {
+            outline: 1px solid darkviolet;
+          }
+        }
+
+        > input[type="submit"], > button {
+          @include flex();
+          border: none;
+          cursor: pointer;
+          padding: 1rem;
+          width: auto;
+          @include sansa();
+          border-radius: 1rem;
+          color: white;
+          font-size: 1.2rem;
+          background-color: rgb(255, 85, 85);
+          transition: all 0.4s;
+
+          &:hover {
+            transform: translateY(5px);
+            background-color: darkviolet;
+          }
+        }
+        .file-input-container {
+          position: relative;
+          display: inline-block;
+        }
+
+        input[type="file"] {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          opacity: 0;
+          z-index: 2;
+          cursor: pointer;
+        }
+
+        .file-input-label {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: darkviolet;
+          color: white;
+          cursor: pointer;
+          font-size: 24px;
+          z-index: 1;
+          position: absolute;
+          bottom: 0;
+          right: -20%;
+          transition: all 0.4s;
+        }
+
+        .file-input-label:hover {
+          background-color: darkblue;
+        }
+
+        .file-input-icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.profileNav {
+  @include flex(row, space-between);
+  width: 100%;
+  height: 80px;
+  background-color: goldenrod;
+  padding: 2rem;
+  > div {
+    @include flex();
+
+    > h2 {
+      font-family: "Grotesk";
+      text-transform: uppercase;
+      font-size: 40px;
+      color: rgb(8, 5, 33);
+    }
+    > a {
+      > img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.proContainer {
+  @include flex(column, space-between);
+  padding: 2rem;
+
+  > div {
+    @include flex(column);
+
+    > div {
+      @include flex(row);
+
+      > button {
+        @include btn(gold);
+        border-radius: 5px;
+      }
+    }
+  }
+}

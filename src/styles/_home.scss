@@ -1,0 +1,6 @@
+.homeContainer {
+    @include flex();
+    margin-top: 80px;
+    padding: 2rem;
+    width: 100%;
+}

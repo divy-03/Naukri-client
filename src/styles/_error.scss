@@ -1,0 +1,5 @@
+.errorCont {
+  @include flex(column);
+  margin-top: 80px;
+  padding: 20px;
+}

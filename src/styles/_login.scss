@@ -1,0 +1,119 @@
+.loginCont {
+  @include flex(row, center, center, 0);
+  height: calc(100dvh - 80px);
+  margin-top: 80px;
+  padding: 20px;
+  width: 100%;
+  background-color: lightblue;
+
+  > .contBox {
+    @include flex();
+    height: 70dvh;
+    width: 30vw;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+    border-radius: 20px;
+    background-color: goldenrod;
+    transition: all 0.3s ease;
+
+    > div {
+      @include flex(column);
+      padding: 20px;
+      height: 80%;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+
+      > h2 {
+        font-family: "Grotesk";
+        font-size: 60px;
+        color: white;
+      }
+
+      > form {
+        @include flex(column);
+
+        > input,
+        select {
+          padding: 1rem 2rem;
+          width: calc(15rem + 10vw);
+          // text-align: center;
+          @include sansa();
+          font-size: 1.1rem;
+          border: none;
+          background-color: wheat;
+          border-bottom: 2px solid darkblue;
+
+          &:focus {
+            outline: 1px solid darkviolet;
+          }
+        }
+
+        > input[type="submit"],
+        > button {
+          @include flex();
+          border: none;
+          cursor: pointer;
+          padding: 1rem;
+          width: auto;
+          @include sansa();
+          border-radius: 1rem;
+          color: white;
+          font-size: 1.2rem;
+          background-color: rgb(255, 85, 85);
+          transition: all 0.4s;
+
+          &:hover {
+            transform: translateY(5px);
+            background-color: darkviolet;
+          }
+        }
+        .file-input-container {
+          position: relative;
+          display: inline-block;
+        }
+
+        // input[type="file"] {
+        //   position: absolute;
+        //   width: 50px;
+        //   height: 50px;
+        //   opacity: 0;
+        //   z-index: 2;
+        //   cursor: pointer;
+        // }
+      }
+    }
+
+    > .loginBox {
+      transform: translate(0%);
+    }
+
+    > .registerBox {
+      transform: translate(100%);
+    }
+
+    > .btnBox {
+      @include flex();
+      top: 0;
+      height: 20%;
+      border-bottom: 2px solid white;
+      background-color: goldenrod;
+
+      > button {
+        @include btn();
+        color: white;
+        font-family: "Grotesk";
+        font-size: 2rem;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .loginCont > .contBox {
+    height: calc(100dvh - 120px);
+    width: 100%;
+  }
+}
