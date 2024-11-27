@@ -1,3 +1,5 @@
+@use "mixin" as *;
+
 .proBox {
   position: fixed;
   top: 50%;
@@ -23,7 +25,6 @@
       position: absolute;
       top: 10px;
       right: 10px;
-
     }
     > div {
       @include flex(column);
@@ -37,7 +38,8 @@
           border-radius: 1rem;
         }
 
-        > input, select {
+        > input,
+        select {
           padding: 1rem 2rem;
           width: calc(15rem + 10vw);
           // text-align: center;
@@ -52,7 +54,8 @@
           }
         }
 
-        > input[type="submit"], > button {
+        > input[type="submit"],
+        > button {
           @include flex();
           border: none;
           cursor: pointer;

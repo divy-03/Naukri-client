@@ -1,3 +1,5 @@
+@use "mixin" as *;
+
 .loginCont {
   @include flex(row, center, center, 0);
   height: calc(100dvh - 80px);

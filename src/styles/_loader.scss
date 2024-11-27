@@ -1,3 +1,5 @@
+@use "mixin" as *;
+
 .loadContainer {
   @include flex(row);
   height: 100dvh;

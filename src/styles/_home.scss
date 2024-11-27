@@ -1,3 +1,5 @@
+@use "mixin" as *;
+
 .homeContainer {
     @include flex();
     margin-top: 80px;

@@ -1,8 +1,8 @@
-@import "default";
-@import "mixin";
-@import "font";
-@import "loader";
-@import "navbar";
-@import "home";
-@import "login";
-@import "profile";
+@use "default";
+@use "mixin" as *;
+@use "font";
+@use "loader";
+@use "navbar";
+@use "home";
+@use "login";
+@use "profile";

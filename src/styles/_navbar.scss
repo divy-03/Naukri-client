@@ -1,3 +1,5 @@
+@use "mixin" as *;
+
 .navbar {
   @include flex(row, space-between);
   position: fixed;
